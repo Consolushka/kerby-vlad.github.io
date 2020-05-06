@@ -1,7 +1,8 @@
 var themeToggle = document.querySelectorAll('.btn--theme');
 var body = document.querySelector('body');
-foreach( toggle in themeToggle){
+themeToggle.forEach(function(toggle, i, themeToggle){
   toggle.addEventListener('click', function () {
+    console.log("lcick");
     if (body.classList.contains('reverse')) {
       primarycolor = '#333333';
       secondarycolor = '#e7e7e7';
@@ -14,5 +15,5 @@ foreach( toggle in themeToggle){
       Cookies.set('theme', 'reverse');
     }
   });
-}
+});
 

@@ -29,27 +29,29 @@ if (Cookies.get('theme') === 'reverse') {
 
 //Переключение темы
 
-var themeToggle = document.querySelector('.btn--theme');
+var themeToggle = document.querySelectorAll('.btn--theme');
 
-themeToggle.addEventListener('click', function () {
-  var WM = document.querySelector('.window__map');
-  var JWM = $(".window__map");
-  var Jbody = $("body");
-  console.log(Jbody);
-  if (body.classList.contains('reverse')) {
-    primarycolor = '#333333';
-    secondarycolor = '#e7e7e7';
-    Cookies.set('theme', 'regular');
-    body.classList.remove('reverse');
-    WM.style.backgroundColor = primarycolor;
-  } else {
-    primarycolor = '#e7e7e7';
-    secondarycolor = '#333333';
-    body.classList.add('reverse');
-    Cookies.set('theme', 'reverse');
-    WM.style.backgroundColor = primarycolor;
-  }
-  Histogramm();
+themeToggle.forEach(function(toggle, i, themeToggle) {
+  toggle.addEventListener('click', function () {
+    var WM = document.querySelector('.window__map');
+    var JWM = $(".window__map");
+    var Jbody = $("body");
+    console.log(Jbody);
+    if (body.classList.contains('reverse')) {
+      primarycolor = '#333333';
+      secondarycolor = '#e7e7e7';
+      Cookies.set('theme', 'regular');
+      body.classList.remove('reverse');
+      WM.style.backgroundColor = primarycolor;
+    } else {
+      primarycolor = '#e7e7e7';
+      secondarycolor = '#333333';
+      body.classList.add('reverse');
+      Cookies.set('theme', 'reverse');
+      WM.style.backgroundColor = primarycolor;
+    }
+    Histogramm();
+  });
 });
 
 
