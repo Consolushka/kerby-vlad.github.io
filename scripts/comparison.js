@@ -169,7 +169,12 @@ function FirstCountryData(response){
     }
   }
   console.log(FirstCData);
-  Compare(FirstCData,SecondCData);
+  if(Object.keys(FirstCData).length===0 || Object.keys(SecondCData).length===0){
+    alert("Не располагаем информацией по данной стране");
+  }
+  else {
+    Compare(FirstCData,SecondCData);
+  }
 }
 
 function SecondCountryData(response){
@@ -189,7 +194,12 @@ function SecondCountryData(response){
     }
   }
   console.log(SecondCData);
-  Compare(FirstCData,SecondCData);
+  if(Object.keys(FirstCData).length===0 || Object.keys(SecondCData).length===0){
+    alert("Не располагаем информацией по данной стране");
+  }
+  else {
+    Compare(FirstCData,SecondCData);
+  }
 }
 
 function Compare(FirstCData,SecondCData) {
