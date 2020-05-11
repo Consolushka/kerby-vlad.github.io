@@ -1,7 +1,7 @@
 let link = document.querySelector(".region__info-link");
 
 window.onload = function() {
-  fetch('../source/scripts/with-regions.json').then(function(response) {
+  fetch('scripts/with-regions.json').then(function(response) {
     response.json().then(function(data) {
       new RussianMap({
         viewPort: data.viewPort,
