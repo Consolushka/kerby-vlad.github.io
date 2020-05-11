@@ -2,50 +2,25 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Карта Данных по Короновирусу</title>
-
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Региональная Информация</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="css/style.min.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="scripts/RussianCountries.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.vmap.js"></script>
-  <script type="text/javascript" src="scripts/jquery.vmap.world.js" charset="utf-8"></script>
-  <script type="text/javascript" src="scripts/jquery.vmap.sampledata.js"></script>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+  <script type="text/javascript" src="scripts/raphael-min.js"></script>
+  <script type="text/javascript" src="scripts/russian-map.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="scripts/RegionsLink.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </head>
 <body>
-<div class="btn-wrapper">
-  <button class="btn btn--open"></button>
-</div>
+
 <div class="btn--theme mobile-none">
   Тема
 </div>
-
-<div class="modal">
-  <h2 class="modal__country-name" id="countryName">Мир</h2>
-  <div class="modal__country-data" id="countryData">
-    <p class="modal__country-cases">
-      Общее число зараженных:
-      <span id="Cases"></span>
-    </p>
-    <p class="modal__country-recovered">
-      Общее число выздоровевших
-      <span id="Recovered"></span>
-    </p>
-    <p class="modal__country-deaths">
-      Общее число погибших:
-      <span id="Deaths"></span>
-    </p>
-  </div>
-  <div class="canvas" id="myCanvas"></div>
-</div>
-
 
 <header class="header">
   <div class="container">
@@ -71,16 +46,21 @@
     </ul>
   </div>
 </header>
+<main class="region">
 
+  <div class="region__info">
+    <p>Ссылка на Региональную информацию: <a class="region__info-link" href="#">Ссылка</a></p>
+  </div>
 
-<main class="window">
-  <div class="container">
-    <div class="window__map" id="vmap"></div>
+  <div class="region__name none">
+dsfsdfsdfsdf
+  </div>
+
+  <div id="russian-map">
+
   </div>
 </main>
 </body>
-
-
-<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/regionsInfo.js"></script>
 <script type="text/javascript" src="scripts/theme.js"></script>
 </html>
