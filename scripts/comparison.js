@@ -17,6 +17,8 @@ let FirstCData={};
 let SecondCData={};
 var body = document.querySelector("body");
 
+//Тема
+
 var primarycolor = "#333333";
 var secondarycolor = "#e7e7e7";
 
@@ -50,6 +52,8 @@ if (Cookies.get('theme') === 'reverse') {
   body.classList.add('reverse');
 }
 
+//Загрузка странн
+
 for (var i = 1,j=1; i <= CountriesCount; i++, j++) {
   var option = document.createElement("option");
   var CountryCode = Object.keys(CountriesList)[i];
@@ -74,6 +78,8 @@ for (var i = 1,j=1; i <= CountriesCount; i++, j++) {
 
 selectFirst.removeChild(selectFirst.lastElementChild);
 selectSecond.removeChild(selectSecond.lastElementChild);
+
+//Получение первоначальной информации (РФ и США)
 
 fetch('https://api.covid19api.com/country/' + "RU" + '?from=' + d + '&to=' + utc)
   .then((response) => {
@@ -122,6 +128,8 @@ fetch('https://api.covid19api.com/country/' + "US" + '?from=' + d + '&to=' + utc
   });
 console.log(SecondCData);
 
+//Слушатель изменений полей
+
 selectFirst.addEventListener("change", function () {
   var selectedOptionFirst = selectFirst.options[selectFirst.selectedIndex];
   FirstCountryOption = selectedOptionFirst;
@@ -151,6 +159,8 @@ selectSecond.addEventListener("change", function () {
       console.log(response);
     });
 });
+
+//Получение информации для выбранных странн
 
 function FirstCountryData(response){
   console.log(response);
@@ -201,6 +211,8 @@ function SecondCountryData(response){
     Compare(FirstCData,SecondCData);
   }
 }
+
+//Рисовка графика
 
 function Compare(FirstCData,SecondCData) {
   google.charts.load('current', {'packages': ['corechart']});
