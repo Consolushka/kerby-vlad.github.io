@@ -45,10 +45,21 @@ window.onload = function() {
 };
 
 function drawRussia(data) {
+  var viewport = "320";
+
+  if(document.documentElement.clientWidth>900){
+    if(document.documentElement.clientWidth>1200){
+      viewport="1200";
+    }
+    else{
+      viewport="900";
+    }
+  }
+
   new RussianMap({
     viewPort: data.viewPort,
     mapId: 'russian-map',
-    width: 862,
+    width: viewport,
     height: 497,
     // дефолтовые атрибуты для контуров регионов
     defaultAttr: {
@@ -61,7 +72,9 @@ function drawRussia(data) {
       fill: '#ed4040'
     },
     onMouseMove: function(event) {
-      document.querySelector(".region__name").classList.remove("none");
+      if (document.documentElement.clientWidth>900){
+        document.querySelector(".region__name").classList.remove("none");
+      }
       var name = this.region.name;
       showName(name);
     },

@@ -194,7 +194,16 @@ function Histogramm() {
       animation: {
         duration: 1
       },
-      colors: [primarycolor]
+      chartArea:{
+        backgroundColor: secondarycolor
+      },
+      colors: [primarycolor],
+      axes: {
+        x: {
+          side: 'bottom',
+          label: 'Кол-во зараженных на определенный день'
+        }
+      }
     };
 
     var chart = new google.charts.Bar(document.getElementById('myCanvas'));

@@ -233,8 +233,21 @@ function Compare(FirstCData,SecondCData) {
       [Object.keys(FirstCData)[0], FirstCData[Object.keys(FirstCData)[0]], SecondCData[Object.keys(FirstCData)[0]]]
     ]);
 
+    var viewport = "320";
+    var fontsize = "10";
+
+    if(document.documentElement.clientWidth>900){
+      if(document.documentElement.clientWidth>1200){
+        fontsize = "20";
+        viewport="1200";
+      }
+      else{
+        viewport="900";
+        fontsize = "18";
+      }
+    }
     var options = {
-      width: "1200",
+      width: viewport,
       lineWidth: 7,
       title: 'Сравнение стран',
       backgroundColor: primarycolor,
@@ -245,7 +258,8 @@ function Compare(FirstCData,SecondCData) {
       vAxis: {
         minValue: 0,
         textStyle: {
-          color: secondarycolor // Подпись цифр
+          color: secondarycolor,
+          fontSize: fontsize// Подпись цифр
         },
         gridlines: {
           color: secondarycolor //Линии
@@ -253,12 +267,14 @@ function Compare(FirstCData,SecondCData) {
       },
       hAxis: {
         textStyle: {
-          color: secondarycolor//Подпись года
+          color: secondarycolor,//Подпись года
+          fontSize: fontsize
         }
       },
       legend: {
         textStyle: {
-          color: secondarycolor // Подпись к линиям
+          color: secondarycolor,// Подпись к линиям
+          fontSize: fontsize
         }
       }
     };
