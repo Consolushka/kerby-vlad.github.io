@@ -245,7 +245,8 @@ function buildMap(data) {
         GetCountry(code);
       },
       onLabelShow: function (event, label, code) {
-        label.text(countryData[code].Country + ' (' + countryData[code].TotalConfirmed + ')');
+        var Rcode = code.toUpperCase();
+        label.text(CountriesList[Rcode] + ' (' + countryData[code].TotalConfirmed + ')');
       }
     });
 

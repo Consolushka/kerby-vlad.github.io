@@ -73,6 +73,7 @@ var RegionLinks ={
   "Ханты-Мансийский автономный округ": "https://myopenugra.ru/news/covid-19/",
   "Челябинская область": "https://cheladmin.ru/ru/glavnaya-stranica/ostavaytesdoma",
   "Чеченская Республика": "http://chechnya.gov.ru/novosti/bolee-160-tysyach-semej-chr-poluchili-pomoshh-rof-s-nachala-pandemii-v-rossii/",
+  "Чукотский автономный округ": "http://87.rospotrebnadzor.ru/",
   "Чувашская Республика": "http://medicin.cap.ru/action/activity/organizaciya-medicinskoj-pomoschi-vzroslomu-nasele/profilaktika/profilaktika-rasprostraneniya-novoj-koronavirusnoj/goryachaya-liniya-dlya-grazhdan-vernuvshihsya-s-te",
   "Ямало-Ненецкий автономный округ": "https://sever-press.ru/covid/",
   "Ярославская область": "https://vk.com/koronavirus76",
