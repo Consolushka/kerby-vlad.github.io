@@ -59,19 +59,11 @@ for (var i = 1,j=1; i <= CountriesCount; i++, j++) {
   var CountryCode = Object.keys(CountriesList)[i];
   option.setAttribute("value", CountryCode);
   option.setAttribute("class", "comparison-form__select-option");
-  if(option.value==="RU"){
-    option.setAttribute("selected","");
-    FirstCountryOption=option;
-  }
   option.innerHTML = CountriesList[CountryCode];
   var option2 = document.createElement("option");
   option2.setAttribute("value", CountryCode);
   option2.setAttribute("class", "comparison-form__select-option");
   option2.innerHTML = CountriesList[CountryCode];
-  if(option2.value==="US"){
-    option2.setAttribute("selected","");
-    SecondCountryOption=option2;
-  }
   selectFirst.appendChild(option);
   selectSecond.appendChild(option2);
 }
