@@ -1,1 +1,0 @@
-# kerby-vlad.github.io
